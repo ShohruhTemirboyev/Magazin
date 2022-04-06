@@ -48,6 +48,7 @@ public class PurchaseController {
         Respons respons=purchaseService.deletePurchase(id);
         return ResponseEntity.ok(respons);
     }
+
     @PostMapping("/edit/{id}")
     public HttpEntity<?> editPurchase(@PathVariable Integer id,@RequestBody ReqPurchase reqPurchase){
         Respons respons=purchaseService.editpurchase(id,reqPurchase);
